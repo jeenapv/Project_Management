@@ -1,0 +1,72 @@
+/*
+SQLyog Community Edition- MySQL GUI v8.03 
+MySQL - 5.1.32-community : Database - project_management
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`project_management` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `project_management`;
+
+/*Table structure for table `tbl_internship` */
+
+DROP TABLE IF EXISTS `tbl_internship`;
+
+CREATE TABLE `tbl_internship` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
+  `internship_type` varchar(100) DEFAULT NULL,
+  `assigned_to` varchar(30) DEFAULT NULL,
+  `sub_assigned_to` varchar(30) DEFAULT NULL,
+  `name_of_student` varchar(30) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `contact_number` varchar(50) DEFAULT NULL,
+  `joining_date` varchar(50) DEFAULT NULL,
+  `duration` varchar(50) DEFAULT NULL,
+  `status` int(20) DEFAULT NULL,
+  `updated_at` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Table structure for table `tbl_project` */
+
+DROP TABLE IF EXISTS `tbl_project`;
+
+CREATE TABLE `tbl_project` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `topic` varchar(50) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `language` varchar(20) DEFAULT NULL,
+  `assigned_to` varchar(20) DEFAULT NULL,
+  `sub_assigned_to` varchar(20) DEFAULT NULL,
+  `assigned_date` varchar(50) DEFAULT NULL,
+  `submission_date` varchar(50) DEFAULT NULL,
+  `status` int(10) DEFAULT NULL,
+  `updated_at` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Table structure for table `tbl_staff_details` */
+
+DROP TABLE IF EXISTS `tbl_staff_details`;
+
+CREATE TABLE `tbl_staff_details` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `designation` varchar(50) DEFAULT NULL,
+  `place` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `contact_number` varchar(50) DEFAULT NULL,
+  `created_at` varchar(50) DEFAULT NULL,
+  `updated_at` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
